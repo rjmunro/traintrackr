@@ -5,15 +5,21 @@ from __future__ import annotations
 import argparse
 
 from traintrackr import Board, Led
+from traintrackr.client import BOARD_ENV, HOST_ENV, default_board, default_host
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("host", help="board hostname or IP address")
+    parser.add_argument(
+        "host",
+        nargs="?",
+        default=default_host(),
+        help=f"board hostname or IP (or set {HOST_ENV})",
+    )
     parser.add_argument(
         "--board",
-        default="tfl6",
-        help="board id or path to a board directory (default: tfl6)",
+        default=default_board(),
+        help=f"board id or path (default: {default_board()}, or set {BOARD_ENV})",
     )
     parser.add_argument(
         "--noise",
@@ -21,6 +27,8 @@ def main() -> None:
         help="dither colours that fall between RGB565 levels",
     )
     args = parser.parse_args()
+    if not args.host:
+        parser.error(f"host is required (pass it or set {HOST_ENV})")
 
     board = Board(args.host, args.board)
 

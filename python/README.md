@@ -19,6 +19,17 @@ board.update(get_color)
 
 `Board(host, name="tfl6")` loads `boards/<name>/`. The name defaults to `tfl6`. Pass a full path to a board directory instead when the map is not in the shared `boards/` tree.
 
+If you omit them, `Board` reads `TRAINTRACKR_HOST` and `TRAINTRACKR_BOARD` from the environment:
+
+```bash
+export TRAINTRACKR_HOST=192.168.1.50
+export TRAINTRACKR_BOARD=tfl6
+```
+
+```python
+board = Board()  # uses the environment
+```
+
 ### The LED
 
 | Field | Meaning |
@@ -68,7 +79,7 @@ python examples/gradient.py 192.168.1.50
 python examples/lines.py 192.168.1.50
 ```
 
-Both take a board host. Pass `--board` for another board id or path, and `--noise` to dither.
+Both take a board host, or read `TRAINTRACKR_HOST` if you omit it. Pass `--board` for another board id or path (or set `TRAINTRACKR_BOARD`), and `--noise` to dither.
 
 ## Board data
 

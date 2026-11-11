@@ -8,12 +8,35 @@ from urllib.error import HTTPError, URLError
 import pytest
 
 from traintrackr import Board, encode_frame
+from traintrackr.client import BOARD_ENV, HOST_ENV
 
 
 def test_encode_frame_guide_example():
     payload = encode_frame([(255, 0, 0), 0, (0, 255, 0), (0, 0, 255)])
     assert payload == "pixels-v5,f800,0,7e0,1f"
     assert " " not in payload
+
+
+def test_board_reads_host_and_board_from_environment(monkeypatch):
+    monkeypatch.setenv(HOST_ENV, "10.0.0.9")
+    monkeypatch.setenv(BOARD_ENV, "tfl6")
+    board = Board()
+    assert board.host == "10.0.0.9"
+    assert board.id == "tfl6"
+
+
+def test_board_arguments_override_environment(monkeypatch):
+    monkeypatch.setenv(HOST_ENV, "10.0.0.9")
+    monkeypatch.setenv(BOARD_ENV, "missing-board")
+    board = Board("192.168.1.50", "tfl6")
+    assert board.host == "192.168.1.50"
+    assert board.id == "tfl6"
+
+
+def test_board_requires_host(monkeypatch):
+    monkeypatch.delenv(HOST_ENV, raising=False)
+    with pytest.raises(ValueError, match=HOST_ENV):
+        Board()
 
 
 def test_encode_frame_brightness_and_length():

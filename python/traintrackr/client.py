@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections.abc import Callable
 from pathlib import Path
 from typing import TypeAlias
@@ -12,8 +13,23 @@ from urllib.request import Request, urlopen
 from traintrackr.color import encode_frame, normalise_color
 from traintrackr.map import BoardMap, Led, load_board
 
+HOST_ENV = "TRAINTRACKR_HOST"
+BOARD_ENV = "TRAINTRACKR_BOARD"
+
 ColorValue: TypeAlias = tuple[float, float, float] | list[float] | float
 GetColor: TypeAlias = Callable[[Led], ColorValue]
+
+
+def default_host() -> str | None:
+    """Return ``TRAINTRACKR_HOST``, or ``None`` if it is unset."""
+    value = os.environ.get(HOST_ENV, "").strip()
+    return value or None
+
+
+def default_board() -> str:
+    """Return ``TRAINTRACKR_BOARD``, or ``tfl6`` if it is unset."""
+    value = os.environ.get(BOARD_ENV, "").strip()
+    return value or "tfl6"
 
 
 class Board:
@@ -21,15 +37,23 @@ class Board:
 
     def __init__(
         self,
-        host: str,
-        name: str | Path = "tfl6",
+        host: str | None = None,
+        name: str | Path | None = None,
         *,
         timeout: float = 10.0,
     ) -> None:
-        self.host = host.rstrip("/")
+        resolved_host = host if host is not None else default_host()
+        if not resolved_host:
+            raise ValueError(
+                f"host is required (pass it or set {HOST_ENV})"
+            )
+        resolved_name: str | Path = (
+            name if name is not None else default_board()
+        )
+        self.host = resolved_host.rstrip("/")
         if "://" in self.host:
             raise ValueError("host should be a hostname or IP, not a URL")
-        self._map = load_board(name)
+        self._map = load_board(resolved_name)
         self.timeout = timeout
 
     @property
