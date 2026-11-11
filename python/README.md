@@ -61,6 +61,15 @@ def get_color(led: Led) -> float:
 
 For `rgb565`, full red `(255, 0, 0)` is `f800`, green `7e0`, blue `1f`, and white `ffff`. A brightness of `128` is `8410`.
 
+## Examples
+
+```bash
+python examples/gradient.py 192.168.1.50
+python examples/lines.py 192.168.1.50
+```
+
+Both take a board host. Pass `--board` for another board id or path, and `--noise` to dither.
+
 ## Board data
 
 Maps, sizes, colour spaces, and palettes live in [`../boards`](../boards/README.md). `tfl6` uses `colour_space: rgb565`. A later greyscale board would use `colour_space: greyscale`, and its palette entries would be single brightness numbers.
