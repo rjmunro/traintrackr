@@ -8,5 +8,10 @@ The frame format is described in [traintrackr-LAN-Guide.md](traintrackr-LAN-Guid
 
 - [boards/](boards/README.md) holds one folder per board. Each folder has the LED map and a description of that board's size, colour space, and line colours. Every language reads this data.
 - [python/](python/README.md) is the Python library. A callback returns a colour for each LED, and the library sends the frame.
+- [`.env.example`](.env.example) is the shared board host and type. Copy it to `.env` and edit. Every language reads the same file.
 
-Node and other languages will use the same `boards/` data.
+Node and other languages will use the same `boards/` data and the same `.env` settings.
+
+```bash
+cp .env.example .env
+```

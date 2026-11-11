@@ -19,15 +19,69 @@ BOARD_ENV = "TRAINTRACKR_BOARD"
 ColorValue: TypeAlias = tuple[float, float, float] | list[float] | float
 GetColor: TypeAlias = Callable[[Led], ColorValue]
 
+_dotenv_loaded = False
+
+
+def find_env_file() -> Path | None:
+    """Find the shared repo-root ``.env`` file."""
+    candidates: list[Path] = [Path.cwd() / ".env"]
+    for parent in Path(__file__).resolve().parents:
+        candidates.append(parent / ".env")
+
+    seen: set[Path] = set()
+    for path in candidates:
+        path = path.resolve()
+        if path in seen:
+            continue
+        seen.add(path)
+        if path.is_file():
+            return path
+    return None
+
+
+def load_dotenv(path: Path | None = None) -> Path | None:
+    """Load ``KEY=VALUE`` pairs from ``.env`` without overriding real env vars.
+
+    The file at the repository root is shared by every language. Returns the
+    path that was read, or ``None`` if none was found.
+    """
+    global _dotenv_loaded
+    env_path = path if path is not None else find_env_file()
+    if env_path is None:
+        _dotenv_loaded = True
+        return None
+
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+            value = value[1:-1]
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+    _dotenv_loaded = True
+    return env_path
+
+
+def _ensure_dotenv() -> None:
+    if not _dotenv_loaded:
+        load_dotenv()
+
 
 def default_host() -> str | None:
     """Return ``TRAINTRACKR_HOST``, or ``None`` if it is unset."""
+    _ensure_dotenv()
     value = os.environ.get(HOST_ENV, "").strip()
     return value or None
 
 
 def default_board() -> str:
     """Return ``TRAINTRACKR_BOARD``, or ``tfl6`` if it is unset."""
+    _ensure_dotenv()
     value = os.environ.get(BOARD_ENV, "").strip()
     return value or "tfl6"
 

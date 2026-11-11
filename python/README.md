@@ -19,16 +19,18 @@ board.update(get_color)
 
 `Board(host, name="tfl6")` loads `boards/<name>/`. The name defaults to `tfl6`. Pass a full path to a board directory instead when the map is not in the shared `boards/` tree.
 
-If you omit them, `Board` reads `TRAINTRACKR_HOST` and `TRAINTRACKR_BOARD` from the environment:
+If you omit them, `Board` reads `TRAINTRACKR_HOST` and `TRAINTRACKR_BOARD` from the process environment, or from the shared [`.env`](../.env.example) at the repository root:
 
 ```bash
-export TRAINTRACKR_HOST=192.168.1.50
-export TRAINTRACKR_BOARD=tfl6
+cp .env.example .env
+# edit TRAINTRACKR_HOST and TRAINTRACKR_BOARD
 ```
 
 ```python
-board = Board()  # uses the environment
+board = Board()  # uses .env or the environment
 ```
+
+Real environment variables win over `.env`. The same file is for every language.
 
 ### The LED
 

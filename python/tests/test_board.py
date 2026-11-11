@@ -35,8 +35,48 @@ def test_board_arguments_override_environment(monkeypatch):
 
 def test_board_requires_host(monkeypatch):
     monkeypatch.delenv(HOST_ENV, raising=False)
+    monkeypatch.setattr("traintrackr.client._dotenv_loaded", True)
+    monkeypatch.setattr("traintrackr.client.find_env_file", lambda: None)
     with pytest.raises(ValueError, match=HOST_ENV):
         Board()
+
+
+def test_board_reads_shared_dotenv_file(monkeypatch, tmp_path):
+    env_file = tmp_path / ".env"
+    env_file.write_text(
+        "# shared settings\n"
+        f"{HOST_ENV}=10.0.0.4\n"
+        f"{BOARD_ENV}=tfl6\n",
+        encoding="utf-8",
+    )
+    monkeypatch.delenv(HOST_ENV, raising=False)
+    monkeypatch.delenv(BOARD_ENV, raising=False)
+    monkeypatch.setattr("traintrackr.client._dotenv_loaded", False)
+    monkeypatch.setattr(
+        "traintrackr.client.find_env_file",
+        lambda: env_file,
+    )
+    board = Board()
+    assert board.host == "10.0.0.4"
+    assert board.id == "tfl6"
+
+
+def test_environment_wins_over_dotenv(monkeypatch, tmp_path):
+    env_file = tmp_path / ".env"
+    env_file.write_text(
+        f"{HOST_ENV}=10.0.0.4\n{BOARD_ENV}=tfl6\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setenv(HOST_ENV, "10.0.0.9")
+    monkeypatch.delenv(BOARD_ENV, raising=False)
+    monkeypatch.setattr("traintrackr.client._dotenv_loaded", False)
+    monkeypatch.setattr(
+        "traintrackr.client.find_env_file",
+        lambda: env_file,
+    )
+    board = Board()
+    assert board.host == "10.0.0.9"
+    assert board.id == "tfl6"
 
 
 def test_encode_frame_brightness_and_length():
