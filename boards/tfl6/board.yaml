@@ -1,0 +1,19 @@
+name: London Underground
+colour_space: rgb565
+x_max: 385
+y_max: 282
+map: leds.csv
+lines:
+  bakerloo: [179, 99, 5] # B36305
+  central: [227, 32, 23] # E32017
+  circle: [255, 211, 0] # FFD300
+  district: [0, 120, 42] # 00782A
+  hammersmith-city: [243, 169, 187] # F3A9BB
+  jubilee: [160, 165, 169] # A0A5A9
+  metropolitan: [155, 0, 86] # 9B0056
+  northern: [255, 255, 255] # white so the line is visible
+  piccadilly: [0, 54, 136] # 003688
+  victoria: [0, 152, 212] # 0098D4
+  waterloo-city: [149, 205, 186] # 95CDBA
+  dlr: [0, 164, 167] # 00A4A7
+  elizabeth: [105, 80, 161] # 6950A1
