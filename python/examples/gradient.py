@@ -1,3 +1,4 @@
+#!/usr/bin/env -S uv run
 """Colour each LED from its position on the board."""
 
 from __future__ import annotations

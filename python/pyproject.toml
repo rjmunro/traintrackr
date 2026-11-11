@@ -15,12 +15,18 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest"]
 
+[dependency-groups]
+dev = ["pytest"]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["traintrackr*"]
 
 [tool.setuptools.package-data]
 traintrackr = ["boards/**/*"]
+
+[tool.uv]
+package = true
 
 # Doctests cover single functions inside the package. Larger tests that cross
 # modules belong in tests/ and run with pytest.

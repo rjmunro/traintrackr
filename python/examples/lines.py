@@ -1,3 +1,4 @@
+#!/usr/bin/env -S uv run
 """Colour each LED with its first line's palette colour."""
 
 from __future__ import annotations

@@ -4,6 +4,16 @@ Python library for painting a Traintrackr board. You write a function that colou
 
 Turn LAN access on in the board's settings first. The wire format is described in [the LAN guide](../traintrackr-LAN-Guide.md).
 
+## Setup
+
+This package is managed with [uv](https://docs.astral.sh/uv/). From `python/`:
+
+```bash
+uv sync --group dev
+```
+
+That creates `.venv` and installs the library plus pytest.
+
 ## Colour one frame
 
 ```python
@@ -76,12 +86,21 @@ For `rgb565`, full red `(255, 0, 0)` is `f800`, green `7e0`, blue `1f`, and whit
 
 ## Examples
 
+The examples use a `uv run` shebang, so they pick up this project's environment when you run them by name:
+
 ```bash
-python examples/gradient.py 192.168.1.50
-python examples/lines.py 192.168.1.50
+./examples/gradient.py 192.168.1.50
+./examples/lines.py
 ```
 
-Both take a board host, or read `TRAINTRACKR_HOST` if you omit it. Pass `--board` for another board id or path (or set `TRAINTRACKR_BOARD`), and `--noise` to dither.
+Or explicitly:
+
+```bash
+uv run examples/lines.py
+uv run pytest
+```
+
+Both take a board host, or read `TRAINTRACKR_HOST` / `.env` if you omit it. Pass `--board` for another board id or path (or set `TRAINTRACKR_BOARD`), and `--noise` to dither.
 
 ## Board data
 
