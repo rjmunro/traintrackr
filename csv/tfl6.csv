@@ -229,7 +229,7 @@ led,station,lines,naptan_id,x_mm,y_mm_from_top
 228,Royal Oak,circle hammersmith-city,940GZZLURYO,133,128
 229,Swiss Cottage,jubilee,940GZZLUSWC,166,113
 230,Hammersmith (H&C Line),circle hammersmith-city,940GZZLUHSC,122,170
-231,Euston (via Charing Cross),,,202,123
+231,Euston (via Charing Cross),northern,940GZZLUEUS,202,123
 232,Farringdon,elizabeth,910GFRNDXR,218,138
 233,Victoria,circle district victoria,940GZZLUVIC,170,181
 234,Southwark,jubilee,940GZZLUSWK,208,197
@@ -312,7 +312,7 @@ led,station,lines,naptan_id,x_mm,y_mm_from_top
 311,Marble Arch,central,940GZZLUMBA,160,155
 312,Green Park,jubilee piccadilly victoria,940GZZLUGPK,170,165
 313,Earl's Court,district,940GZZLUECT,140,181
-314,Kennington (via Charing Cross / to Battersea),,,190,221
+314,Kennington (via Charing Cross / to Battersea),northern,940GZZLUKNG,190,221
 315,Cannon Street,circle district,940GZZLUCST,221,168
 316,Tooting Broadway,northern,940GZZLUTBY,152,267
 317,Greenwich,dlr,940GZZDLGRE,288,242
