@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traintrackr"
+version = "0.1.0"
+description = "Paint a Traintrackr LED board from a colour callback and send the frame"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["traintrackr*"]
+
+# Doctests cover single functions inside the package. Larger tests that cross
+# modules belong in tests/ and run with pytest.
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+testpaths = ["traintrackr"]
