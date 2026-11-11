@@ -51,34 +51,41 @@ class BoardMap:
         return self.lines[name]
 
 
-def find_board_dir(name: str) -> Path:
-    """Find ``boards/<name>`` for an installed package or this repository.
+def find_board_dir(name: str | Path) -> Path:
+    """Find a board directory by short name or by full path.
 
-    Prefer a copy next to this module (the pip-installed layout). Otherwise
-    walk up from this file looking for a ``boards`` directory.
+    A path that already contains ``board.yaml`` is used as-is. Otherwise
+    ``name`` is treated as a board id: prefer a copy next to this module
+    (the pip-installed layout), then walk up looking for ``boards/<name>``.
     """
-    packaged = Path(__file__).resolve().parent / "boards" / name
+    path = Path(name)
+    if (path / "board.yaml").is_file():
+        return path.resolve()
+
+    board_id = str(name)
+    packaged = Path(__file__).resolve().parent / "boards" / board_id
     candidates = [packaged]
     for parent in Path(__file__).resolve().parents:
-        candidates.append(parent / "boards" / name)
+        candidates.append(parent / "boards" / board_id)
 
     seen: set[Path] = set()
-    for path in candidates:
-        path = path.resolve()
-        if path in seen:
+    for candidate in candidates:
+        candidate = candidate.resolve()
+        if candidate in seen:
             continue
-        seen.add(path)
-        if (path / "board.yaml").is_file():
-            return path
+        seen.add(candidate)
+        if (candidate / "board.yaml").is_file():
+            return candidate
 
     raise FileNotFoundError(
         f"board {name!r} not found under a boards/ directory"
     )
 
 
-def load_board(name: str = "tfl6") -> BoardMap:
-    """Load ``boards/<name>/board.yaml`` and its LED CSV."""
+def load_board(name: str | Path = "tfl6") -> BoardMap:
+    """Load a board by short name or by path to a board directory."""
     board_dir = find_board_dir(name)
+    board_id = board_dir.name
     with (board_dir / "board.yaml").open(encoding="utf-8") as handle:
         raw = yaml.safe_load(handle)
 
@@ -116,7 +123,7 @@ def load_board(name: str = "tfl6") -> BoardMap:
 
     leds = _load_leds(map_path, lines)
     return BoardMap(
-        id=name,
+        id=board_id,
         name=str(display_name),
         colour_space=colour_space,
         x_max=x_max,

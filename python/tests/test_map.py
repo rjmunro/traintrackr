@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from traintrackr import load_board
+from traintrackr.map import find_board_dir
 
 
 def test_tfl6_profile():
@@ -12,6 +15,15 @@ def test_tfl6_profile():
     assert board.colour_space == "rgb565"
     assert board.x_max == 385
     assert board.y_max == 282
+
+
+def test_tfl6_from_full_path():
+    board_dir = find_board_dir("tfl6")
+    board = load_board(board_dir)
+    assert board.id == "tfl6"
+    assert len(board.leds) == 373
+    assert load_board(str(board_dir)).id == "tfl6"
+    assert load_board(Path(board_dir)).colour_space == "rgb565"
 
 
 def test_tfl6_led_count_and_order():

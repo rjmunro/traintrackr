@@ -17,7 +17,7 @@ def get_color(led: Led) -> tuple[float, float, float]:
 board.update(get_color)
 ```
 
-`Board(host, name="tfl6")` loads `boards/<name>/`. The name defaults to `tfl6`.
+`Board(host, name="tfl6")` loads `boards/<name>/`. The name defaults to `tfl6`. Pass a full path to a board directory instead when the map is not in the shared `boards/` tree.
 
 ### The LED
 
