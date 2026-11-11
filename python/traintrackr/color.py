@@ -174,3 +174,36 @@ def encode_rgb565(
     """
     red, green, blue = normalise_color(color)
     return rgb_to_rgb565(red, green, blue, add_noise=add_noise)
+
+
+def encode_frame(
+    colors: list[tuple[float, float, float] | list[float] | float]
+    | tuple[tuple[float, float, float] | list[float] | float, ...],
+    *,
+    colour_space: str = "rgb565",
+    add_noise: bool = False,
+) -> str:
+    """Encode one colour per LED as a ``pixels-v5`` frame.
+
+    The result is a single line with no spaces. Only ``rgb565`` is
+    supported so far.
+
+    >>> encode_frame([(255, 0, 0), 0, (0, 255, 0), (0, 0, 255)])
+    'pixels-v5,f800,0,7e0,1f'
+    >>> encode_frame([255, 128, 0])
+    'pixels-v5,ffff,8410,0'
+    >>> " " in encode_frame([(255, 0, 0), (0, 255, 0)])
+    False
+    >>> encode_frame([(255, 0, 0)], colour_space="greyscale")
+    Traceback (most recent call last):
+    ...
+    ValueError: unsupported colour_space 'greyscale'
+    """
+    if colour_space != "rgb565":
+        raise ValueError(f"unsupported colour_space {colour_space!r}")
+    if not colors:
+        raise ValueError("a frame needs at least one colour")
+    values = [
+        encode_rgb565(color, add_noise=add_noise) for color in colors
+    ]
+    return "pixels-v5," + ",".join(values)
