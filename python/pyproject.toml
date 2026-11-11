@@ -8,6 +8,9 @@ version = "0.1.0"
 description = "Paint a Traintrackr LED board from a colour callback and send the frame"
 readme = "README.md"
 requires-python = ">=3.11"
+dependencies = [
+    "PyYAML",
+]
 
 [project.optional-dependencies]
 dev = ["pytest"]
@@ -16,8 +19,11 @@ dev = ["pytest"]
 where = ["."]
 include = ["traintrackr*"]
 
+[tool.setuptools.package-data]
+traintrackr = ["boards/**/*"]
+
 # Doctests cover single functions inside the package. Larger tests that cross
 # modules belong in tests/ and run with pytest.
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"
-testpaths = ["traintrackr"]
+testpaths = ["traintrackr", "tests"]
