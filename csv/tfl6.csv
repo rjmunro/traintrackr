@@ -1,0 +1,374 @@
+led,station,lines,naptan_id,x_mm,y_mm_from_top
+1,Amersham,metropolitan,940GZZLUAMS,42,35
+2,Iver,elizabeth,910GIVER,26,145
+3,Watford,metropolitan,940GZZLUWAF,72,31
+4,Harlesden,bakerloo,940GZZLUHSN,112,95
+5,Stanmore,jubilee,940GZZLUSTM,126,51
+6,Wimbledon,district,940GZZLUWIM,136,238
+7,Edgware,northern,940GZZLUEGW,153,53
+8,High Barnet,northern,940GZZLUHBT,219,31
+9,Manor House,piccadilly,940GZZLUMRH,256,73
+10,Tottenham Hale,victoria,940GZZLUTMH,278,81
+11,Cockfosters,piccadilly,940GZZLUCKS,256,27
+12,Snaresbrook,central,940GZZLUSNB,308,69
+13,Stratford,central,940GZZLUSTD,302,107
+14,Epping,central,940GZZLUEPG,308,21
+15,Shenfield,elizabeth,910GSHENFLD,373,42
+16,Upminster,district,940GZZLUUPM,377,70
+17,Chesham,metropolitan,940GZZLUCSM,46,27
+18,Langley (Berks),elizabeth,910GLANGLEY,26,139
+19,Croxley,metropolitan,940GZZLUCXY,72,37
+20,Willesden Junction,bakerloo,940GZZLUWJN,112,100
+21,Canons Park,jubilee,940GZZLUCPK,126,57
+22,Wimbledon Park,district,940GZZLUWIP,136,232
+23,Burnt Oak,northern,940GZZLUBTK,159,59
+24,Totteridge & Whetstone,northern,940GZZLUTAW,219,38
+25,Finsbury Park,piccadilly,940GZZLUFPK,252,85
+26,Seven Sisters,victoria,940GZZLUSVS,270,81
+27,Oakwood,piccadilly,940GZZLUOAK,256,33
+28,Stratford International,dlr,940GZZDLSIT,300,91
+29,Pudding Mill Lane,dlr,940GZZDLPUD,302,119
+30,Theydon Bois,central,940GZZLUTHB,308,27
+31,Brentwood,elizabeth,910GBRTWOOD,368,47
+32,Upminster Bridge,district,940GZZLUUPB,372,75
+33,Chalfont & Latimer,metropolitan,940GZZLUCAL,56,35
+34,Slough,elizabeth,910GSLOUGH,26,133
+35,Moor Park,metropolitan,940GZZLUMPK,74,47
+36,Kensal Green,bakerloo,940GZZLUKSL,112,105
+37,Queensbury,jubilee,940GZZLUQBY,126,63
+38,Southfields,district,940GZZLUSFS,136,226
+39,Colindale,northern,940GZZLUCND,165,65
+40,Woodside Park,northern,940GZZLUWOP,219,45
+41,Arsenal,piccadilly,940GZZLUASL,246,91
+42,Finsbury Park,victoria,940GZZLUFPK,258,89
+43,Southgate,piccadilly,940GZZLUSGT,256,39
+44,Mile End,central,940GZZLUMED,282,125
+45,Bromley-by-Bow,district hammersmith-city,940GZZLUBBB,303,129
+46,Debden,central,940GZZLUDBN,308,33
+47,Harold Wood,elizabeth,910GHRLDWOD,363,52
+48,Hornchurch,district,940GZZLUHCH,367,80
+49,Chorleywood,metropolitan,940GZZLUCYD,64,37
+50,Burnham (Berks),elizabeth,910GBNHAM,26,127
+51,Northwood,metropolitan,940GZZLUNOW,79,52
+52,Queen's Park,bakerloo,940GZZLUQPS,112,111
+53,Kingsbury,jubilee,940GZZLUKBY,126,69
+54,East Putney,district,940GZZLUEPY,136,220
+55,Hendon Central,northern,940GZZLUHCL,171,71
+56,West Finchley,northern,940GZZLUWFN,219,52
+57,Holloway Road,piccadilly,940GZZLUHWY,240,97
+58,Highbury & Islington,victoria,940GZZLUHAI,246,107
+59,Arnos Grove,piccadilly,940GZZLUASG,256,45
+60,Mile End,district hammersmith-city,940GZZLUMED,282,129
+61,Bow Road,district hammersmith-city,940GZZLUBWR,295,129
+62,Loughton,central,940GZZLULGN,308,39
+63,Gidea Park,elizabeth,910GGIDEAPK,358,57
+64,Elm Park,district,940GZZLUEPK,362,85
+65,Rickmansworth,metropolitan,940GZZLURKW,69,42
+66,Taplow,elizabeth,910GTAPLOW,26,121
+67,Northwood Hills,metropolitan,940GZZLUNWH,84,57
+68,Kilburn Park,bakerloo,940GZZLUKPK,117,117
+69,Wembley Park,jubilee,940GZZLUWYP,126,75
+70,Putney Bridge,district,940GZZLUPYB,136,209
+71,Brent Cross,northern,940GZZLUBTX,177,77
+72,Mill Hill East,northern,940GZZLUMHL,209,47
+73,Caledonian Road,piccadilly,940GZZLUCAR,232,105
+74,Liverpool Street,elizabeth,910GLIVST 910GLIVSTLL,242,137
+75,Bounds Green,piccadilly,940GZZLUBDS,256,51
+76,Westferry,dlr,940GZZDLWFE,280,165
+77,Bow Church,dlr,940GZZDLBOW,288,133
+78,Buckhurst Hill,central,940GZZLUBKH,308,45
+79,Romford,elizabeth,910GROMFORD,353,62
+80,Dagenham East,district,940GZZLUDGE,357,90
+81,West Ruislip,central,940GZZLUWRP,64,53
+82,Maidenhead,elizabeth,910GMDNHEAD,26,115
+83,Pinner,metropolitan,940GZZLUPNR,89,62
+84,Maida Vale,bakerloo,940GZZLUMVL,123,122
+85,Preston Road,metropolitan,940GZZLUPRD,118,77
+86,Richmond,district,940GZZLURMD,98,204
+87,Golders Green,northern,940GZZLUGGN,183,83
+88,Finchley Central,northern,940GZZLUFYC,219,59
+89,Old Street,northern,940GZZLUODS,230,129
+90,Liverpool Street,central circle hammersmith-city metropolitan,940GZZLULVT,248,141
+91,Wood Green,piccadilly,940GZZLUWOG,256,57
+92,Canada Water,jubilee,940GZZLUCWR,264,185
+93,Devons Road,dlr,940GZZDLDEV,288,141
+94,Roding Valley,central,940GZZLURVY,314,49
+95,Chadwell Heath,elizabeth,910GCHDWLHT,348,67
+96,Dagenham Heathway,district,940GZZLUDGY,352,95
+97,Uxbridge,metropolitan piccadilly,940GZZLUUXB,44,59
+98,Twyford,elizabeth,910GTWYFORD,26,109
+99,North Harrow,metropolitan,940GZZLUNHA,94,67
+100,Warwick Avenue,bakerloo,940GZZLUWKA,130,122
+101,Wembley Park,metropolitan,940GZZLUWYP,123,82
+102,Turnham Green,district,940GZZLUTNG,104,181
+103,Hampstead,northern,940GZZLUHTD,189,89
+104,East Finchley,northern,940GZZLUEFY,219,66
+105,Moorgate,circle hammersmith-city metropolitan northern,940GZZLUMGT,230,141
+106,Aldgate East,district hammersmith-city,940GZZLUADE,262,149
+107,Turnpike Lane,piccadilly,940GZZLUTPN,256,63
+108,Bermondsey,jubilee,940GZZLUBMY,247,185
+109,Langdon Park,dlr,940GZZDLLDP,288,149
+110,Chigwell,central,940GZZLUCWL,320,49
+111,Goodmayes,elizabeth,910GGODMAYS,343,72
+112,Becontree,district,940GZZLUBEC,347,100
+113,Hillingdon,metropolitan piccadilly,940GZZLUHGD,52,59
+114,Reading,elizabeth,910GRDNGSTN,26,103
+115,Ruislip,metropolitan piccadilly,940GZZLURSP,68,59
+116,Paddington,bakerloo,940GZZLUPAC,138,122
+117,Neasden,jubilee,940GZZLUNDN,131,82
+118,Turnham Green,piccadilly,940GZZLUTNG,104,175
+119,Belsize Park,northern,940GZZLUBZP,195,95
+120,Highgate,northern,940GZZLUHGT,219,73
+121,Barbican,circle hammersmith-city metropolitan,940GZZLUBBN,224,139
+122,Aldgate,circle metropolitan,940GZZLUALD,254,151
+123,Woodford,central,940GZZLUWOF,308,57
+124,London Bridge,jubilee northern,940GZZLULNB,230,185
+125,All Saints,dlr,940GZZDLALL,288,157
+126,Grange Hill,central,940GZZLUGGH,326,49
+127,Seven Kings,elizabeth,910GSVNKNGS,338,77
+128,Upney,district,940GZZLUUPY,342,105
+129,Ickenham,metropolitan piccadilly,940GZZLUICK,60,59
+130,Ealing Common,district piccadilly,940GZZLUECM,88,165
+131,Ruislip Manor,metropolitan piccadilly,940GZZLURSM,74,59
+132,Edgware Road (Bakerloo),bakerloo,940GZZLUERB,148,122
+133,Dollis Hill,jubilee,940GZZLUDOH,136,87
+134,Stamford Brook,district,940GZZLUSFB,110,181
+135,Chalk Farm,northern,940GZZLUCFM,201,101
+136,Archway,northern,940GZZLUACY,219,80
+137,Holborn,central piccadilly,940GZZLUHBN,204,155
+138,Bank,central dlr waterloo-city,940GZZDLBNK 940GZZLUBNK,224,161
+139,South Woodford,central,940GZZLUSWF,308,63
+140,Borough,northern,940GZZLUBOR,214,205
+141,Poplar,dlr,940GZZDLPOP,288,165
+142,Hainault,central,940GZZLUHLT,330,53
+143,Ilford,elizabeth,910GILFORD,333,82
+144,Barking,district hammersmith-city,940GZZLUBKG,337,110
+145,Ruislip Gardens,central,940GZZLURSG,64,81
+146,Acton Town,district piccadilly,940GZZLUACT,88,175
+147,Eastcote,metropolitan piccadilly,940GZZLUEAE,79,64
+148,Marylebone,bakerloo,940GZZLUMYB,154,122
+149,Willesden Green,jubilee,940GZZLUWIG,141,92
+150,Ravenscourt Park,district,940GZZLURVP,116,181
+151,Camden Town,northern,940GZZLUCTN,205,109
+152,Tufnell Park,northern,940GZZLUTFP,219,87
+153,Covent Garden,piccadilly,940GZZLUCGN,199,160
+154,St. Paul's,central,940GZZLUSPU,218,161
+155,Walthamstow Central,victoria,940GZZLUWWL,294,81
+156,Elephant & Castle,bakerloo northern,940GZZLUEAC,202,217
+157,Blackwall,dlr,940GZZDLBLA,294,165
+158,Fairlop,central,940GZZLUFLP,330,59
+159,Manor Park,elizabeth,910GMANRPK,328,87
+160,East Ham,district hammersmith-city,940GZZLUEHM,332,115
+161,South Ruislip,central,940GZZLUSRP,64,95
+162,Chiswick Park,district,940GZZLUCWP,94,181
+163,Rayners Lane,metropolitan piccadilly,940GZZLURYL,84,69
+164,Edgware Road (Circle Line),circle hammersmith-city,940GZZLUERC,148,127
+165,Kilburn,jubilee,940GZZLUKBN,146,97
+166,Hammersmith (Dist&Picc Line),district,940GZZLUHSD,122,181
+167,Euston,northern victoria,940GZZLUEUS,208,123
+168,Kentish Town,northern,940GZZLUKSH,215,95
+169,Leicester Square,northern piccadilly,940GZZLULSQ,194,165
+170,Chancery Lane,central,940GZZLUCHL,212,157
+171,Blackhorse Road,victoria,940GZZLUBLR,286,81
+172,Kennington,northern,940GZZLUKNG,194,225
+173,East India,dlr,940GZZDLEIN,302,165
+174,Barkingside,central,940GZZLUBKE,330,65
+175,Forest Gate,elizabeth,910GFRSTGT,323,92
+176,Upton Park,district hammersmith-city,940GZZLUUPK,327,120
+177,Northolt,central,940GZZLUNHT,64,107
+178,Gunnersbury,district,940GZZLUGBY,98,187
+179,West Harrow,metropolitan,940GZZLUWHW,92,73
+180,Edgware Road (Circle Line),district,940GZZLUERC,148,132
+181,West Hampstead,jubilee,940GZZLUWHP,154,99
+182,Barons Court,district,940GZZLUBSC,128,181
+183,King's Cross St. Pancras,northern,940GZZLUKSX,214,124
+184,King's Cross St. Pancras,piccadilly victoria,940GZZLUKSX,214,119
+185,Piccadilly Circus,bakerloo piccadilly,940GZZLUPCC,186,165
+186,Charing Cross,bakerloo northern,940GZZLUCHX,194,173
+187,Bethnal Green,central,940GZZLUBLG,274,125
+188,Oval,northern,940GZZLUOVL,187,232
+189,West India Quay,dlr,940GZZDLWIQ,288,172
+190,Newbury Park,central,940GZZLUNBP,330,71
+191,Maryland,elizabeth,910GMRYLAND,318,97
+192,Plaistow,district hammersmith-city,940GZZLUPLW,322,125
+193,Greenford,central,940GZZLUGFD,68,119
+194,Kew Gardens,district,940GZZLUKWG,98,198
+195,Harrow-on-the-Hill,metropolitan,940GZZLUHOH,100,73
+196,Paddington,circle district,940GZZLUPAC,142,132
+197,Finchley Road,jubilee,940GZZLUFYR,164,103
+198,West Kensington,district,940GZZLUWKN,134,181
+199,King's Cross St. Pancras,circle hammersmith-city metropolitan,940GZZLUKSX,214,129
+200,Angel,northern,940GZZLUAGL,223,124
+201,Westminster,circle district jubilee,940GZZLUWSM,186,181
+202,Embankment,northern,940GZZLUEMB,194,177.5
+203,Stepney Green,district hammersmith-city,940GZZLUSGN,278,133
+204,Stockwell,northern victoria,940GZZLUSKW,182,237
+205,Canary Wharf,dlr,940GZZDLCAN,288,177
+206,Gants Hill,central,940GZZLUGTH,326,75
+207,Stratford,dlr jubilee,940GZZDLSTD 940GZZLUSTD,314,107
+208,West Ham,district dlr hammersmith-city,940GZZDLWHM 940GZZLUWHM,314,129
+209,Perivale,central,940GZZLUPVL,74,125
+210,South Ealing,piccadilly,940GZZLUSEA,82,175
+211,Northwick Park,metropolitan,940GZZLUNKP,106,73
+212,Paddington (H&C Line)-Underground,circle hammersmith-city,940GZZLUPAH,140,127
+213,Finchley Road,metropolitan,940GZZLUFYR,158,107
+214,Hammersmith (Dist&Picc Line),piccadilly,940GZZLUHSD,122,175
+215,Mornington Crescent,northern,940GZZLUMTC,202,117
+216,Farringdon,circle hammersmith-city metropolitan,940GZZLUFCN,218,133
+217,St. James's Park,circle district,940GZZLUSJP,178,181
+218,Embankment,bakerloo circle district,940GZZLUEMB,200,181
+219,Whitechapel,district elizabeth hammersmith-city,910GWCHAPXR 940GZZLUWPL,274,137
+220,Brixton,victoria,940GZZLUBXN,192,247
+221,Canary Wharf,elizabeth,910GCANWHRF,284,181
+222,Redbridge,central,940GZZLURBG,320,75
+223,Stratford High Street,dlr,940GZZDLSHS,314,114
+224,Star Lane,dlr,940GZZDLSTL,314,147
+225,Hanger Lane,central,940GZZLUHGR,80,131
+226,Northfields,piccadilly,940GZZLUNFD,77,180
+227,South Harrow,piccadilly,940GZZLUSHH,88,83
+228,Royal Oak,circle hammersmith-city,940GZZLURYO,133,128
+229,Swiss Cottage,jubilee,940GZZLUSWC,166,113
+230,Hammersmith (H&C Line),circle hammersmith-city,940GZZLUHSC,122,170
+231,Euston (via Charing Cross),,,202,123
+232,Farringdon,elizabeth,910GFRNDXR,218,138
+233,Victoria,circle district victoria,940GZZLUVIC,170,181
+234,Southwark,jubilee,940GZZLUSWK,208,197
+235,Limehouse,dlr,940GZZDLLIM,272,165
+236,Clapham North,northern,940GZZLUCPN,177,242
+237,Canary Wharf,jubilee,940GZZLUCYF,281,185
+238,Wanstead,central,940GZZLUWSD,314,75
+239,Abbey Road,dlr,940GZZDLABR,314,121
+240,Canning Town,dlr,940GZZDLCGT,314,159
+241,Park Royal,piccadilly,940GZZLUPKR,88,143
+242,Boston Manor,piccadilly,940GZZLUBOS,72,185
+243,Sudbury Hill,piccadilly,940GZZLUSUH,88,93
+244,Westbourne Park,circle hammersmith-city,940GZZLUWSP,128,133
+245,St. John's Wood,jubilee,940GZZLUSJW,166,119
+246,Goldhawk Road,circle hammersmith-city,940GZZLUGHK,122,165
+247,Warren Street,northern victoria,940GZZLUWRR,194,137
+248,Russell Square,piccadilly,940GZZLURSQ,210,141
+249,Pimlico,victoria,940GZZLUPCO,170,204
+250,Waterloo,bakerloo waterloo-city,940GZZLUWLO,200,191
+251,Shadwell,dlr,940GZZDLSHA,264,165
+252,Clapham Common,northern,940GZZLUCPC,172,247
+253,Crossharbour,dlr,940GZZDLCLA,288,206
+254,Leytonstone,central,940GZZLULYS,308,81
+255,West Silvertown,dlr,940GZZDLWSV,341,186
+256,Royal Victoria,dlr,940GZZDLRVC,334,165
+257,North Ealing,piccadilly,940GZZLUNEN,88,148
+258,Osterley,piccadilly,940GZZLUOSY,67,190
+259,Sudbury Town,piccadilly,940GZZLUSUT,88,103
+260,Ladbroke Grove,circle hammersmith-city,940GZZLULAD,122,143
+261,Baker Street,circle hammersmith-city metropolitan,940GZZLUBST,172,127
+262,Shepherd's Bush Market,circle hammersmith-city,940GZZLUSBM,122,160
+263,Goodge Street,northern,940GZZLUGDG,194,145
+264,Tottenham Court Road,elizabeth,910GTOTCTRD,197,151
+265,Sloane Square,circle district,940GZZLUSSQ,162,181
+266,Waterloo,northern,940GZZLUWLO,194,191
+267,Tower Gateway,dlr,940GZZDLTWG,252,169
+268,Clapham South,northern,940GZZLUCPS,167,252
+269,Mudchute,dlr,940GZZDLMUD,288,213
+270,Leyton,central,940GZZLULYN,308,89
+271,Custom House,elizabeth,910GCSTMHSXR,352,182
+272,Custom House (for ExCel),dlr,940GZZDLCUS,355,178
+273,Ealing Broadway,elizabeth,910GEALINGB,82,151
+274,Hounslow East,piccadilly,940GZZLUHWE,62,195
+275,Alperton,piccadilly,940GZZLUALP,88,115
+276,Latimer Road,circle hammersmith-city,940GZZLULRD,122,149
+277,Great Portland Street,circle hammersmith-city metropolitan,940GZZLUGPS,178,127
+278,Barons Court,piccadilly,940GZZLUBSC,128,175
+279,Bond Street,elizabeth,910GBONDST,169,151
+280,Tottenham Court Road,central northern,940GZZLUTCR,194,155
+281,South Kensington,circle district,940GZZLUSKS,152,181
+282,Waterloo,jubilee,940GZZLUWLO,188,191
+283,Tower Hill,circle district,940GZZLUTWH,248,165
+284,Balham,northern,940GZZLUBLM,162,257
+285,Island Gardens,dlr,940GZZDLISL,288,220
+286,Stratford (London),elizabeth,910GSTFD,308,107
+287,Pontoon Dock,dlr,940GZZDLPDK,346,191
+288,Prince Regent,dlr,940GZZDLPRE,360,183
+289,Ealing Broadway,central district,940GZZLUEBY,82,155
+290,Hounslow Central,piccadilly,940GZZLUHWC,57,200
+291,Harrow & Wealdstone,bakerloo,940GZZLUHAW,112,63
+292,Acton Main Line,elizabeth,910GACTONML,100,142
+293,Euston Square,circle hammersmith-city metropolitan,940GZZLUESQ,190,127
+294,Kensington (Olympia),district,940GZZLUKOY,136,167
+295,Bond Street,central jubilee,940GZZLUBND,166,155
+296,Oxford Circus,bakerloo central victoria,940GZZLUOXC,176,155
+297,Gloucester Road,circle district,940GZZLUGTR,146,181
+298,Lambeth North,bakerloo,940GZZLULBN,200,205
+299,Bank / Monument,circle district northern,940GZZLUBNK 940GZZLUMMT,230,165
+300,Tooting Bec,northern,940GZZLUTBC,157,262
+301,Cutty Sark (for Maritime Greenwich),dlr,940GZZDLCUT,288,235
+302,West Ham,jubilee,940GZZLUWHM,310,125
+303,London City Airport,dlr,940GZZDLLCA,351,196
+304,Royal Albert,dlr,940GZZDLRAL,365,188
+305,West Ealing,elizabeth,910GWEALING,73,151
+306,Hounslow West,piccadilly,940GZZLUHWT,52,205
+307,Kenton,bakerloo,940GZZLUKEN,112,69
+308,West Acton,central,940GZZLUWTA,94,155
+309,Regent's Park,bakerloo,940GZZLURGP,172,139
+310,Earl's Court,piccadilly,940GZZLUECT,139,175
+311,Marble Arch,central,940GZZLUMBA,160,155
+312,Green Park,jubilee piccadilly victoria,940GZZLUGPK,170,165
+313,Earl's Court,district,940GZZLUECT,140,181
+314,Kennington (via Charing Cross / to Battersea),,,190,221
+315,Cannon Street,circle district,940GZZLUCST,221,168
+316,Tooting Broadway,northern,940GZZLUTBY,152,267
+317,Greenwich,dlr,940GZZDLGRE,288,242
+318,Canning Town,jubilee,940GZZLUCGT,310,165
+319,King George V,dlr,940GZZDLKGV,356,201
+320,Beckton Park,dlr,940GZZDLBPK,370,193
+321,Hanwell,elizabeth,910GHANWELL,63,151
+322,Hatton Cross,piccadilly,940GZZLUHNX,47,210
+323,South Kenton,bakerloo,940GZZLUSKT,112,75
+324,North Acton,central,940GZZLUNAN,104,155
+325,Baker Street,bakerloo jubilee,940GZZLUBST,166,133
+326,Gloucester Road,piccadilly,940GZZLUGTR,146,175
+327,Lancaster Gate,central,940GZZLULGT,154,155
+328,Hyde Park Corner,piccadilly,940GZZLUHPC,165,170
+329,West Brompton,district,940GZZLUWBN,136,189
+330,Vauxhall,victoria,940GZZLUVXL,172,227
+331,Mansion House,circle district,940GZZLUMSH,217,172
+332,Colliers Wood,northern,940GZZLUCSD,147,272
+333,Deptford Bridge,dlr,940GZZDLDEP,288,249
+334,North Greenwich,jubilee,940GZZLUNGW,301,183
+335,Woolwich Arsenal,dlr,940GZZDLWLA,357,221
+336,Cyprus,dlr,940GZZDLCYP,375,198
+337,Southall,elizabeth,910GSTHALL,53,151
+338,Heathrow Terminals 2 & 3,elizabeth piccadilly,910GHTRWAPT 940GZZLUHRC,36,221
+339,North Wembley,bakerloo,940GZZLUNWY,112,80
+340,East Acton,central,940GZZLUEAN,110,155
+341,Paddington,elizabeth,910GPADTLL 910GPADTON,144,137
+342,High Street Kensington,circle district,940GZZLUHSK,142,165
+343,Queensway,central,940GZZLUQWY,148,155
+344,Knightsbridge,piccadilly,940GZZLUKNB,160,175
+345,Fulham Broadway,district,940GZZLUFBY,136,197
+346,Nine Elms,northern,940GZZNEUGST,164,221
+347,Blackfriars,circle district,940GZZLUBKF,212,177
+348,South Wimbledon,northern,940GZZLUSWN,142,277
+349,Elverson Road,dlr,940GZZDLELV,288,256
+350,Heron Quays,dlr,940GZZDLHEQ,288,191
+351,Woolwich,elizabeth,910GWOLWXR,371,221
+352,Gallions Reach,dlr,940GZZDLGAL,380,203
+353,Hayes & Harlington,elizabeth,910GHAYESAH,43,151
+354,Heathrow Terminal 5,elizabeth piccadilly,910GHTRWTM5 940GZZLUHR5,24,239
+355,Wembley Central,bakerloo,940GZZLUWYC,112,85
+356,White City,central,940GZZLUWCY,116,155
+357,Bayswater,circle district,940GZZLUBWT,142,143
+358,Holland Park,central,940GZZLUHPK,135,155
+359,Notting Hill Gate,central circle district,940GZZLUNHG,142,155
+360,South Kensington,piccadilly,940GZZLUSKS,152,175
+361,Parsons Green,district,940GZZLUPSG,136,203
+362,Battersea Power Station,northern,940GZZBPSUST,155,221
+363,Temple,circle district,940GZZLUTMP,206,181
+364,Morden,northern,940GZZLUMDN,137,282
+365,Lewisham,dlr,940GZZDLLEW,288,263
+366,South Quay,dlr,940GZZDLSOQ,288,199
+367,Abbey Wood,elizabeth,910GABWDXR,371,229
+368,Beckton,dlr,940GZZDLBEC,385,208
+369,West Drayton,elizabeth,910GWDRYTON,33,151
+370,Heathrow Terminal 4,elizabeth piccadilly,910GHTRWTM4 940GZZLUHR4,36,243
+371,Stonebridge Park,bakerloo,940GZZLUSGP,112,90
+372,Wood Lane,circle hammersmith-city,940GZZLUWLA,122,155
+373,Shepherd's Bush (Central),central,940GZZLUSBC,129,155
