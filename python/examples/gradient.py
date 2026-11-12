@@ -3,43 +3,22 @@
 
 from __future__ import annotations
 
-import argparse
-
 from traintrackr import Board, Led
-from traintrackr.client import BOARD_ENV, HOST_ENV, default_board, default_host
+from traintrackr.cli import parse_board_args
+from traintrackr.client import default_board
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "host",
-        nargs="?",
-        default=default_host(),
-        help=f"board hostname or IP (or set {HOST_ENV})",
-    )
-    parser.add_argument(
-        "--board",
-        default=default_board(),
-        help=f"board id or path (default: {default_board()}, or set {BOARD_ENV})",
-    )
-    parser.add_argument(
-        "--noise",
-        action="store_true",
-        help="dither colours that fall between RGB565 levels",
-    )
-    args = parser.parse_args()
-    if not args.host:
-        parser.error(f"host is required (pass it or set {HOST_ENV})")
-
-    board = Board(args.host, args.board)
+def main(host: str, board: str | None = None, *, noise: bool = False) -> None:
+    board = Board(host, board if board is not None else default_board())
 
     def get_color(led: Led) -> tuple[float, float, float]:
         return (led.x / board.x_max * 255, led.y / board.y_max * 255, 0)
 
-    payload = board.update(get_color, add_noise=args.noise)
+    payload = board.update(get_color, add_noise=noise)
     print(board.frame_url(payload))
-    print(f"sent {payload.count(',')} colours to {args.host}")
+    print(f"sent {payload.count(',')} colours to {host}")
 
 
 if __name__ == "__main__":
-    main()
+    args = parse_board_args(__doc__, noise=True)
+    main(args.host, args.board, noise=args.noise)
