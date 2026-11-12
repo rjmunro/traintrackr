@@ -89,6 +89,7 @@ The examples use a `uv run` shebang, so they pick up this project's environment 
 ```bash
 ./examples/gradient.py 192.168.1.50
 ./examples/lines.py
+./examples/sweep.py
 ```
 
 Or explicitly:
@@ -98,7 +99,17 @@ uv run examples/lines.py
 uv run pytest
 ```
 
-Both take a board host, or read `TRAINTRACKR_HOST` / `.env` if you omit it. Pass `--board` for another board id or path (or set `TRAINTRACKR_BOARD`), and `--noise` to dither.
+Both take a board host, or read `TRAINTRACKR_HOST` / `.env` if you omit it. Pass `--board` for another board type or path (or set `TRAINTRACKR_BOARD`), and `--noise` to dither.
+
+You can also import an example and call it with an explicit host and board type (from the `python/` directory):
+
+```python
+from examples.lines import main
+
+main("192.168.1.50", "tfl6")
+```
+
+Argument parsing stays in each script's `if __name__ == "__main__":` block.
 
 ## Board data
 
