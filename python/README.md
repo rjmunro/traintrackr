@@ -6,13 +6,11 @@ Turn LAN access on in the board's settings first. The wire format is described i
 
 ## Setup
 
-This package is managed with [uv](https://docs.astral.sh/uv/). From `python/`:
+This package is managed with [uv](https://docs.astral.sh/uv/). Running an example (or `uv run …`) creates `.venv` and installs dependencies as needed. To install the optional test tools without running a script:
 
 ```bash
 uv sync --group dev
 ```
-
-That creates `.venv` and installs the library plus pytest.
 
 ## Colour one frame
 
@@ -27,7 +25,7 @@ def get_color(led: Led) -> tuple[float, float, float]:
 board.update(get_color)
 ```
 
-`Board(host, name="tfl6")` loads `boards/<name>/`. The name defaults to `tfl6`. Pass a full path to a board directory instead when the map is not in the shared `boards/` tree.
+`Board(host, name="tfl6")` loads `boards/<name>/`. The name is the board type (SKU); it defaults to `tfl6`. Pass a full path to a board directory instead when the map is not in the shared `boards/` tree.
 
 If you omit them, `Board` reads `TRAINTRACKR_HOST` and `TRAINTRACKR_BOARD` from the process environment, or from the shared [`.env`](../.env.example) at the repository root:
 
