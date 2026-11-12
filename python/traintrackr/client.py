@@ -159,10 +159,14 @@ class Board:
             add_noise=add_noise,
         )
 
+    def frame_url(self, payload: str) -> str:
+        """Build the ``/send-data`` URL for a ``pixels-v5`` payload."""
+        # Commas must stay literal in the query string.
+        return f"http://{self.host}/send-data?data={quote(payload, safe=',')}"
+
     def send(self, payload: str) -> None:
         """Send a ``pixels-v5`` payload with a GET request."""
-        # Commas must stay literal in the query string.
-        url = f"http://{self.host}/send-data?data={quote(payload, safe=',')}"
+        url = self.frame_url(payload)
         request = Request(url, method="GET")
         try:
             with urlopen(request, timeout=self.timeout) as response:
