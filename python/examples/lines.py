@@ -37,6 +37,7 @@ def main() -> None:
         return board.line_color(led.line[0])
 
     payload = board.update(get_color, add_noise=args.noise)
+    print(board.frame_url(payload))
     print(f"sent {payload.count(',')} colours to {args.host}")
 
 
