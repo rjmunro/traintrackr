@@ -7,6 +7,7 @@ name = "traintrackr"
 version = "0.1.0"
 description = "Paint a Traintrackr LED board from a colour callback and send the frame"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
     "PyYAML",
